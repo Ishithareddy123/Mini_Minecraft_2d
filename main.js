@@ -33,3 +33,56 @@ function add_object(ob){
   canvas.add(img_object);
     })  
   }
+  window.addEventListener("keydown",my_keydown);
+  function my_keydown(e){
+    keypress=e.keyCode;
+    console.log(keypress);
+    if(e.shiftKey == true && keypress=='80'){
+      block_img_height+=10;
+      block_img_width+=10;
+    document.getElementById("current_width").innerHTML=block_img_width;
+    document.getElementById("current_height").innerHTML=block_img_height;
+    }
+    if(e.shiftKey == true && keypress=='77'){
+      block_img_height-=10;
+      block_img_width-=10;
+    document.getElementById("current_width").innerHTML=block_img_width;
+    document.getElementById("current_height").innerHTML=block_img_height;
+    }
+    if(keypress=='67'){
+      add_object("cloud.jpg");
+      console.log(keypress);
+    }
+    if(keypress=='68'){
+      add_object("dark_green.png");
+      console.log(keypress);
+    }
+    if(keypress=='71'){
+      add_object("ground.png");
+      console.log(keypress);
+    }
+    if(keypress=='76'){
+      add_object("light_green.png");
+      console.log(keypress);
+    }
+    if(keypress=='82'){
+      add_object("roof.jpg");
+      console.log(keypress);
+    }
+    if(keypress=='84'){
+      add_object("trunk.jpg");
+      console.log(keypress);
+    }
+    if(keypress=='81'){
+      add_object("unique.png");
+      console.log(keypress);
+    }
+    if(keypress=='87'){
+      add_object("wall.jpg");
+      console.log(keypress);
+    }
+    if(keypress=='89'){
+      add_object("yellow_wall.png");
+      console.log(keypress);
+    }
+  }
