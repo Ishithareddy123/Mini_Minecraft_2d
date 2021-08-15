@@ -85,4 +85,52 @@ function add_object(ob){
       add_object("yellow_wall.png");
       console.log(keypress);
     }
+    if(keypress=="37"){
+      left();
+    }
+    if(keypress=="39"){
+      right();
+    }
+    if(keypress=="38"){
+      up();
+    }
+    if(keypress=="40"){
+      down()
+    }
+  }
+  function left(){
+    if(player_x>0){
+      player_x-=block_img_width;
+canvas.remove(player_object);
+add_player();
+    }
+    
+  }
+  function right(){
+    if(player_x<750){
+      player_x+=block_img_width;
+canvas.remove(player_object);
+add_player();
+    }
+    
+  }
+  function up(){
+    if(player_y>0){
+      player_y-=block_img_height;
+canvas.remove(player_object);
+add_player();
+    }
+    
+  }
+  function down(){
+    if(player_y<580){
+      player_y+=block_img_height;
+canvas.remove(player_object);
+add_player();
+    }
+    
+  }
+  function clear(){
+    var objects=canvas.getObjects();
+    canvas.remove(objects[0]);
   }
